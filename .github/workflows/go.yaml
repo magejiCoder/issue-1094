@@ -19,8 +19,8 @@ jobs:
         image: golang:${{ matrix.go }}-stretch
 
     steps:
-    - name: Check out code into the Go module directory
-      uses: actions/checkout@v2
+    - name: Check out code
+      uses: actions/checkout@v1
       with:
         fetch-depth: 1
         path: go/src/github.com/magejiCoder/issue-1094
