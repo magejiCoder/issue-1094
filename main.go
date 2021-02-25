@@ -1,6 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/golang/protobuf/proto"
+)
+
+var (
+	_ proto.Marshaler
+)
 
 func main() {
 	f := Foo()
