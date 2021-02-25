@@ -29,3 +29,4 @@ google.golang.org/protobuf/reflect/protoreflect
 google.golang.org/protobuf/reflect/protoregistry
 google.golang.org/protobuf/runtime/protoiface
 google.golang.org/protobuf/runtime/protoimpl
+# github.com/golang/protobuf v0.0.0-20160926185624-87c000235d3d => github.com/golang/protobuf v1.3.0
