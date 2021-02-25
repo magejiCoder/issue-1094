@@ -23,4 +23,9 @@ jobs:
       uses: actions/checkout@v2
     - name: Run
       run: |
-        go run main.go
+        mkdir -p /tmp/go/src/github.com/magejiCoder
+        mv . /tmp/go/src/github.com/magejiCoder/issue-1094
+        go run /tmp/go/src/github.com/magejiCoder/issue-1094/main.go
+      env:
+        GOPATH: /tmp/go
+        GO111MODULE: off
