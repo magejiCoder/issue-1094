@@ -21,11 +21,12 @@ jobs:
     steps:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 1
+        path: go/src/github.com/magejiCoder/issue-1094
     - name: Run
       run: |
-        mkdir -p /tmp/go/src/github.com/magejiCoder
-        mv . /tmp/go/src/github.com/magejiCoder/issue-1094
-        go run /tmp/go/src/github.com/magejiCoder/issue-1094/main.go
+        go run main.go
       env:
-        GOPATH: /tmp/go
+        GOPATH: /home/runner/work/issue-1094/go
         GO111MODULE: off
