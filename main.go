@@ -3,31 +3,12 @@ package main
 import (
 	"fmt"
 
-	"github.com/golang/protobuf/proto"
-)
-
-var (
-	_ proto.Marshaler
+	"github.com/magejiCoder/issue-1094/proto/foo"
 )
 
 func main() {
-	f := Foo()
-	fmt.Printf("f.bat: %s", f.bat)
-}
-
-type T = struct {
-	bar bool
-	bat string
-}
-
-func Foo() *T {
-	return &foo{
-		bar: false,
-		bat: "issue-1094",
+	fb := &foo.FooBar{
+		Name: "bat",
 	}
-}
-
-type foo = struct {
-	bar bool
-	bat string
+	fmt.Printf("f.bat: %s", fb.GetName())
 }

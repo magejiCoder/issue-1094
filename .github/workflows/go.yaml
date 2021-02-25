@@ -11,12 +11,12 @@ jobs:
     name: Build & Test
     strategy:
       matrix:
-        go: [1.11,1.12,1.13,1.14]
+        go: [1.11.2,1.13.5]
 
     runs-on: ubuntu-latest
 
     container:
-        image: golang:${{ matrix.go }}-stretch
+        image: golang:${{ matrix.go }}
 
     steps:
     - name: Check out code
