@@ -24,3 +24,5 @@ jobs:
     - name: Run
       run: |
         go run main.go
+      env:
+        GO111MODULE: off
