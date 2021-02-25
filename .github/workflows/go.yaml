@@ -1,0 +1,23 @@
+name: Go
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Build & Test
+    strategy:
+      matrix:
+        go: [1.11,1.12,1.13,1.14]
+
+    runs-on: ubuntu-latest
+
+    container:
+        image: golang:${{ matrix.go }}-stretch
+
+    steps:
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v2
