@@ -21,3 +21,6 @@ jobs:
     steps:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
+    - name: Run
+      run: |
+        go run main.go
