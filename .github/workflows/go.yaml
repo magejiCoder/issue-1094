@@ -26,7 +26,8 @@ jobs:
         path: go/src/github.com/magejiCoder/issue-1094
     - name: Run
       run: |
-        go run main.go
+        echo ${GOPATH}
+        go run ${GOPATH}/src/github.com/magejiCoder/issue-1094/main.go
       env:
         GOPATH: /home/runner/work/issue-1094/go
         GO111MODULE: off
